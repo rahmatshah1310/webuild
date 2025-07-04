@@ -37,7 +37,7 @@ const Footer = () => {
                 <FaPhoneAlt /> +966 534383766‬
               </p>
               <p className="flex items-center gap-2">
-                <FaEnvelope /> Hafeez218@gmail.com
+                <FaEnvelope /> hafeez218@gmail.com
               </p>
             </div>
 
@@ -92,14 +92,22 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="bg-[#040F28] text-white/80 border-t border-[#FD5D14]">
-        <div className="flex md:flex-row justify-center items-center text-center md:text-start px-5 py-4 gap-3">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-start px-5 py-4 gap-3">
           <p className="mb-0">
             &copy;{" "}
             <a className="text-[#FD5D14] font-semibold" href="#">
-            Developed by: www.octetec.com 
+             Safe Leaders Innovation
             </a>
             . All Rights Reserved.
           </p>
+          <div className="text-sm">
+            <p>
+              Developed by:{" "}
+              <a className="text-[#FD5D14] font-semibold" href="https://htmlcodex.com">
+                www.octetec.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </>
