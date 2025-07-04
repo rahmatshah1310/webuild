@@ -96,14 +96,16 @@ const Footer = () => {
           <p className="mb-0">
             &copy;{" "}
             <a className="text-[#FD5D14] font-semibold" href="#">
-             Safe Leaders Innovation
+              Safe Leaders Innovation
             </a>
             . All Rights Reserved.
           </p>
           <div className="text-sm">
             <p>
-              Developed by:{" "}
-              <a className="text-[#FD5D14] font-semibold" href="https://www.octetec.com">
+              Developed by:
+              <a className="text-[#FD5D14] font-semibold"
+                target="_blank"
+                rel="noopener noreferrer" href="https://www.octetec.com">
                 www.octetec.com
               </a>
             </p>
