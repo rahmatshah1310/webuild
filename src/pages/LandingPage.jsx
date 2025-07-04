@@ -67,7 +67,7 @@ const LandingPage = () => {
                                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                                     <div className="text-center text-white px-4 max-w-3xl flex flex-col items-center justify-center space-y-6">
                                         <div className="text-5xl text-[#FD5D14]">{slide.icon}</div>
-                                        <h1 className="text-4xl sm:text-6xl font-extrabold uppercase">
+                                        <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">
                                             {slide.heading}
                                         </h1>
                                         <Link
