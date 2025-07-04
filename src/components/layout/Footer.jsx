@@ -45,7 +45,6 @@ const Footer = () => {
               {[FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram].map((Icon, index) => (
                 <a
                   key={index}
-                  href="#"
                   className="bg-[#FD5D14] p-3 rounded-full hover:opacity-90 transition"
                 >
                   <Icon />
