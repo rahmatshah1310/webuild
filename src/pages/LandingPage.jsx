@@ -437,7 +437,7 @@ const LandingPage = () => {
 
 
             {/* <!-- Blog Start --> */}
-            <section className="w-full bg-white py-16 px-6 ">
+            {/* <section className="w-full bg-white py-16 px-6 ">
                 <div className="max-w-xl mx-auto text-center mb-10">
                     <h1 className="text-3xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
                         Latest <span className="text-[#FD5D14]">Articles</span> From Our Blog Post
@@ -477,7 +477,7 @@ const LandingPage = () => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
             {/* <!-- Blog End --> */}
             {/* Footer sections */}
             <Footer />
