@@ -70,12 +70,10 @@ const LandingPage = () => {
                                         <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">
                                             {slide.heading}
                                         </h1>
-                                        <Link
-                                            to={slide.buttonLink}
-                                            className="inline-block bg-[#FD5D14] text-white px-10 py-3 text-lg font-medium transition"
-                                        >
+                                        <button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
                                             {slide.buttonText}
-                                        </Link>
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +200,7 @@ const LandingPage = () => {
             </section>
             {/* <!-- Services End --> */}
 
-<OrganizationalStructure/>
+            <OrganizationalStructure />
             {/* <!-- Appointment Start --> */}
             <ContactSection />
             {/* <!-- Appointment End --> */}
