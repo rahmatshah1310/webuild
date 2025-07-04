@@ -25,7 +25,7 @@ const TopBar = () => {
             <SlEnvelopeOpen className="text-3xl text-[#FD5D14] me-3" />
             <div className="text-left">
               <h6 className="uppercase font-bold">Email Us</h6>
-              <span>Hafeez218@gmail.com</span>
+              <span>hafeez218@gmail.com</span>
             </div>
           </div>
         </div>
