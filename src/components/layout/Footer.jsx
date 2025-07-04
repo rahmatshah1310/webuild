@@ -45,6 +45,7 @@ const Footer = () => {
               {[FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram].map((Icon, index) => (
                 <a
                   key={index}
+                  href="#"
                   className="bg-[#FD5D14] p-3 rounded-full hover:opacity-90 transition"
                 >
                   <Icon />
@@ -102,7 +103,7 @@ const Footer = () => {
           <div className="text-sm">
             <p>
               Developed by:{" "}
-              <a className="text-[#FD5D14] font-semibold" href="https://htmlcodex.com">
+              <a className="text-[#FD5D14] font-semibold" href="https://www.octetec.com">
                 www.octetec.com
               </a>
             </p>
