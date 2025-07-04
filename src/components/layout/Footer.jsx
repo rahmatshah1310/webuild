@@ -96,7 +96,7 @@ const Footer = () => {
           <p className="mb-0">
             &copy;{" "}
             <a className="text-[#FD5D14] font-semibold" href="#">
-             Safe Leaders Innovation
+            Developed by: www.octetec.com 
             </a>
             . All Rights Reserved.
           </p>
