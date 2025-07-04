@@ -25,9 +25,7 @@ const Footer = () => {
               </h1>
             </a>
             <p className="mb-4 text-white/70 leading-relaxed">
-              Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem
-              nonumy. Tempor sea ipsum diam sed clita dolore eos dolores magna
-              erat dolore sed stet justo et dolor.
+             Safe Leaders Innovation is a dynamic construction firm delivering quality through innovation, safety, and precision.
             </p>
             <div className="space-y-2 text-white/80">
               <p className="flex items-center gap-2">
