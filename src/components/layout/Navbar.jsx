@@ -10,12 +10,13 @@ const Navbar = () => {
     <div className="sticky top-0 bg-[#040F28] shadow-sm z-50">
       <nav className="flex items-center justify-between md:px-15 px-6 flex-wrap text-white py-7">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <h1 className="font-extrabold uppercase text-white flex items-center">
             <BsBuildings className="text-[#FD5D14] text-4xl mr-2" />
+            {/* <img src="/Logo.png" alt=""  className='w-10 h-10'/> */}
            SAFE LEADERS INNOVATION
           </h1>
-        </a>
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button
