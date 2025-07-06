@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import { useEffect } from "react";
+import Button from "../ui/Button";
 
 Modal.setAppElement("#root"); // Important for accessibility
 
@@ -16,12 +16,12 @@ const ServiceModal = ({ service, onClose }) => {
       overlayClassName="fixed inset-0 bg-black/40 z-50 flex items-start justify-center px-4 py-8"
     >
       {/* Close Button */}
-      <button
+      <Button
         onClick={onClose}
         className="absolute top-3 right-4 text-gray-600 hover:text-black text-2xl font-bold z-10"
       >
         &times;
-      </button>
+      </Button>
 
       {/* Modal Content */}
       <div className="p-5">
