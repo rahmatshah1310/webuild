@@ -1,4 +1,4 @@
-import { Link, } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import { completedProjects } from "../constants/data";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BiPlus } from "react-icons/bi";
@@ -12,11 +12,9 @@ const ProjectPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 px-4 my-4">
                 {completedProjects.map((project) => (
-                    <a
+                    <Link
                         key={project.id}
-                        href={project.link} // external project link
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        to={`/projects/${project.id}`}
                         className="relative group overflow-hidden rounded shadow-md block"
                     >
                         <img
@@ -36,8 +34,7 @@ const ProjectPage = () => {
                         <div className="absolute right-3 top-3 bg-primary p-2 rounded-full">
                             <BiPlus className="text-white text-xl" />
                         </div>
-                    </a>
-
+                    </Link>
                 ))}
             </div>
         </div>
