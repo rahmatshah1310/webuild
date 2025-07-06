@@ -35,13 +35,13 @@ import ServiceModal from '../components/modal/ServiceModal.jsx';
 import ContactSection from '../components/sections/ContactSection.jsx';
 import OrgStructureTimeline from '../components/sections/OrganizationStructure.jsx';
 import TeamModal from '../components/modal/TeamModal';
+import Button from '../components/ui/Button.jsx';
 
 
 
 
 
 const LandingPage = () => {
-    const [activeFilter, setActiveFilter] = useState("*");
     const [selectedService, setSelectedService] = useState(null);
     const [selectedMember, setSelectedMember] = useState(null);
     const previewProjects = completedProjects.slice(0, 8);
@@ -74,9 +74,9 @@ const LandingPage = () => {
                                         <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">
                                             {slide.heading}
                                         </h1>
-                                        <button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
+                                        <Button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
                                             {slide.buttonText}
-                                        </button>
+                                        </Button>
 
                                     </div>
                                 </div>
@@ -185,12 +185,12 @@ const LandingPage = () => {
                                 </div>
                                 <h4 className="text-xl font-semibold uppercase mb-3">{service.title}</h4>
                                 <p className="text-gray-600 mb-4">{service.exp}</p>
-                                <button
+                                <Button
                                     onClick={() => setSelectedService(service)}
                                     className="inline-flex items-center gap-1 text-[#FD5D14] font-bold uppercase pb-5 hover:underline cursor-pointer"
                                 >
                                     Read More <GoArrowRight />
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     ))}
