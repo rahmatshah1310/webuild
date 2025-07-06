@@ -148,7 +148,7 @@ const LandingPage = () => {
                             <img
                                 src={aboutImg}
                                 alt="About"
-                                className="absolute inset-0 w-full h-full object-cover"
+                                className="w-full h-full object-cover object-[center_20%] "
                             />
                         </div>
                     </div>
@@ -177,7 +177,7 @@ const LandingPage = () => {
                             <img
                                 src={service.img}
                                 alt={service.title}
-                                className="w-full h-56 object-cover"
+                                className="w-full h-56 object-cover object-[center_20%]"
                             />
                             <div className="px-4 flex flex-col items-center">
                                 <div className="mb-4 transform transition-transform duration-300 group-hover:scale-150 rounded-full bg-white p-4">
@@ -280,11 +280,11 @@ const LandingPage = () => {
                             onClick={() => setSelectedMember(member)}
                             className="flex flex-col bg-gray-100 rounded-md overflow-hidden shadow-md hover:shadow-lg transition"
                         >
-                            <div className="h-[390px]">
+                            <div className="">
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-[390px] object-cover object-[center_20%] align-middle"
                                 />
                             </div>
                             <div className="p-4 text-center">
