@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TopBar from '../components/layout/TopBar';
 import Footer from '../components/layout/Footer';
 import Navbar from '../components/layout/Navbar';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -42,6 +42,7 @@ const LandingPage = () => {
     const [activeFilter, setActiveFilter] = useState("*");
     const [selectedService, setSelectedService] = useState(null);
     const previewProjects = completedProjects.slice(0, 8);
+    const {id}=useParams()
 
 
 
@@ -218,11 +219,9 @@ const LandingPage = () => {
                 {/* Project Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                     {previewProjects.map((project, index) => (
-                        <a
+                        <Link
                             key={index}
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            to={`/projects/${project.id}`} // <-- Customize this route as needed
                             className="relative group overflow-hidden rounded shadow-md block"
                         >
                             <img
@@ -239,11 +238,12 @@ const LandingPage = () => {
                                     </span>
                                 </div>
                             </div>
+
+                            {/* Optional: Keep the plus icon for UX */}
                             <div className="absolute right-3 top-3 bg-primary p-2 rounded-full">
                                 <BiPlus className="text-white text-xl" />
                             </div>
-                        </a>
-
+                        </Link>
                     ))}
                 </div>
 
