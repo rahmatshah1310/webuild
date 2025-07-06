@@ -34,6 +34,8 @@ import { GoArrowRight } from "react-icons/go";
 import ServiceModal from '../components/modal/ServiceModal.jsx';
 import ContactSection from '../components/sections/ContactSection.jsx';
 import OrgStructureTimeline from '../components/sections/OrganizationStructure.jsx';
+import TeamModal from '../components/modal/TeamModal';
+
 
 
 
@@ -41,8 +43,9 @@ import OrgStructureTimeline from '../components/sections/OrganizationStructure.j
 const LandingPage = () => {
     const [activeFilter, setActiveFilter] = useState("*");
     const [selectedService, setSelectedService] = useState(null);
+    const [selectedMember, setSelectedMember] = useState(null);
     const previewProjects = completedProjects.slice(0, 8);
-    const {id}=useParams()
+    const { id } = useParams()
 
 
 
@@ -262,6 +265,7 @@ const LandingPage = () => {
 
 
             {/* <!-- Team Start --> */}
+
             <section className="w-full bg-white py-16 px-5">
                 <div className="max-w-3xl mx-auto text-center mb-10">
                     <h1 className="text-5xl sm:text-5xl font-bold uppercase mb-4 text-[#040F28]">
@@ -271,27 +275,32 @@ const LandingPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className="flex flex-col bg-gray-100 rounded-md overflow-hidden shadow-md">
-                            {/* Image Section */}
-                            <div className='h-[390px]'>
+                        <Link
+                            key={index}
+                            onClick={() => setSelectedMember(member)}
+                            className="flex flex-col bg-gray-100 rounded-md overflow-hidden shadow-md hover:shadow-lg transition"
+                        >
+                            <div className="h-[390px]">
                                 <img
                                     src={member.image}
                                     alt={member.name}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-
-                            {/* Info Section */}
                             <div className="p-4 text-center">
                                 <h4 className="text-xl font-semibold uppercase">{member.name}</h4>
                                 <span className="text-sm text-gray-500">{member.role}</span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
-
+                <TeamModal
+                    member={selectedMember}
+                    onClose={() => setSelectedMember(null)}
+                />
 
             </section>
+
             {/* <!-- Team End --> */}
 
 
