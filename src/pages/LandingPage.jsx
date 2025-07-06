@@ -33,7 +33,7 @@ import { blogPosts, categories, completedProjects, projects, services, slides, t
 import { GoArrowRight } from "react-icons/go";
 import ServiceModal from '../components/modal/ServiceModal.jsx';
 import ContactSection from '../components/sections/ContactSection.jsx';
-import OrganizationalStructure from '../components/sections/OrganizationStructure.jsx';
+import OrgStructureTimeline from '../components/sections/OrganizationStructure.jsx';
 
 
 
@@ -200,7 +200,7 @@ const LandingPage = () => {
             </section>
             {/* <!-- Services End --> */}
 
-            <OrganizationalStructure />
+            <OrgStructureTimeline />
             {/* <!-- Appointment Start --> */}
             <ContactSection />
             {/* <!-- Appointment End --> */}
@@ -218,7 +218,13 @@ const LandingPage = () => {
                 {/* Project Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                     {previewProjects.map((project, index) => (
-                        <div key={index} className="relative group overflow-hidden rounded shadow-md">
+                        <a
+                            key={index}
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative group overflow-hidden rounded shadow-md block"
+                        >
                             <img
                                 src={project.image}
                                 alt={project.title}
@@ -233,17 +239,14 @@ const LandingPage = () => {
                                     </span>
                                 </div>
                             </div>
-                            <Link
-                                to={project.image}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="absolute right-3 top-3 bg-primary p-2 rounded-full"
-                            >
+                            <div className="absolute right-3 top-3 bg-primary p-2 rounded-full">
                                 <BiPlus className="text-white text-xl" />
-                            </Link>
-                        </div>
+                            </div>
+                        </a>
+
                     ))}
                 </div>
+
                 {completedProjects.length > 8 && (
                     <div className="text-center mt-10">
                         <Link
