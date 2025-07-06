@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
+import Button from "../ui/Button";
 
 const ContactSection = () => {
     const formRef = useRef();
@@ -73,12 +74,12 @@ const ContactSection = () => {
                                     name="message" placeholder="Message" rows="5"
                                     className="w-full col-span-full border border-gray-300 px-4 py-3 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary"
                                 ></textarea>
-                                <button
+                                <Button
                                     type="submit"
                                     className="col-span-full bg-[#FD5D14] cursor-pointer  text-white py-3 w-full rounded-md font-semibold  transition"
                                 >
                                     Submit Request
-                                </button>
+                                </Button>
                             </div>
                         </form>
                     </div>
