@@ -25,7 +25,7 @@ const TeamModal = ({ member, onClose }) => {
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-[500px] object-cover rounded mb-4"
+          className="w-full h-[500px] object-cover rounded mb-4 object-[center_20%] align-middle"
         />
         <h2 className="text-3xl font-bold uppercase text-[#040F28] mb-1">{member.name}</h2>
         <p className="text-gray-500 mb-4">{member.role}</p>
