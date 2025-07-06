@@ -3,10 +3,11 @@ import testimonialImage2 from "../assets/images/testimonial-2.jpg";
 import blog1 from "../assets/images/blog-1.jpg";
 import blog2 from "../assets/images/blog-2.jpg";
 import blog3 from "../assets/images/blog-3.jpg";
-import team1 from "../assets/images/team-1.jpg";
+// import team1 from "../assets/images/team-1.jpg";
 import team2 from "../assets/images/team-2.jpg";
 import team3 from "../assets/images/team-3.jpg";
 import team4 from "../assets/images/team-4.jpg";
+import ceoImage from "../assets/images/ceoImage.jpg";
 import portfolio1 from "../assets/images/portfolio-1.jpg";
 import portfolio2 from "../assets/images/portfolio-2.jpg";
 import portfolio3 from "../assets/images/portfolio-3.jpg";
@@ -24,6 +25,15 @@ import carousel2 from "../assets/images/carousel-2.jpg";
 import { GiTrenchSpade } from "react-icons/gi";
 import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding,FaHardHat ,
     FaDraftingCompass, } from "react-icons/fa";
+
+
+export const navLinks = [
+  { label: 'Home', hash: '#home' },
+  { label: 'About', hash: '#about' },
+  { label: 'Service', hash: '#service' },
+  { label: 'Contact', hash: '#contact' },
+];
+   
 export const blogPosts = [
     {
         title: "Rebum diam clita lorem erat magna est erat",
@@ -68,9 +78,9 @@ export const testimonials = [
 export const teamMembers = [
     {
         id:1,
-        name: "Adam Phillips",
+        name: "Hafiz Ur Rahman",
         role: "CEO & Founder",
-        image: team1,
+        image: ceoImage,
     },
     {
         id:2,
