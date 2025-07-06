@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BsBuildings } from "react-icons/bs";
 import { VscListSelection } from 'react-icons/vsc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <div className="sticky top-0 bg-[#040F28] shadow-sm z-50">
@@ -33,18 +44,18 @@ const Navbar = () => {
           } transition-all duration-500 ease-in-out overflow-hidden w-full lg:flex lg:items-center lg:w-auto lg:opacity-100 lg:max-h-full`}
         >
           <div className="lg:ml-auto flex flex-col lg:flex-row items-start lg:items-center text-white space-y-2 lg:space-y-0 lg:space-x-6 pt-3 lg:pt-0">
-            <a href="#home"  className="hover:text-[#FD5D14] transition-colors duration-300">
+            <Link to="/#home"  className="hover:text-[#FD5D14] transition-colors duration-300">
               Home
-            </a>
-            <a href="#about"  className="hover:text-[#FD5D14] transition-colors duration-300">
+            </Link>
+            <Link to="/#about"  className="hover:text-[#FD5D14] transition-colors duration-300">
               About
-            </a>
-            <a href="#service"  className="hover:text-[#FD5D14] transition-colors duration-300">
+            </Link>
+            <Link to="/#service"  className="hover:text-[#FD5D14] transition-colors duration-300">
               Service
-            </a>
-            <a href="#contact"  className="hover:text-[#FD5D14] transition-colors duration-300">
+            </Link>
+            <Link to="/#contact"  className="hover:text-[#FD5D14] transition-colors duration-300">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
