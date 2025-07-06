@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import Button from "../ui/Button";
 
 Modal.setAppElement("#root");
 
@@ -13,12 +14,12 @@ const TeamModal = ({ member, onClose }) => {
       className="bg-white w-full max-w-3xl rounded-lg overflow-hidden shadow-xl relative mx-auto mt-20 max-h-[90vh] overflow-y-auto outline-none"
       overlayClassName="fixed inset-0 bg-black/40 z-50 flex items-start justify-center px-4 py-8"
     >
-      <button
+      <Button
         onClick={onClose}
         className="absolute top-3 right-4 text-gray-600 hover:text-black text-2xl font-bold z-10"
       >
         &times;
-      </button>
+      </Button>
 
       <div className="p-6">
         <img
