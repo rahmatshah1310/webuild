@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { completedProjects } from "../constants/data";
+import Button from "../components/ui/Button";
 
 const ProjectDetailPage = () => {
   const { id } = useParams();
@@ -16,12 +17,12 @@ const ProjectDetailPage = () => {
       <p className="text-gray-600 mb-6">{project.location}</p>
 
       {/* Back Button */}
-      <button
+      <Button
         onClick={() => navigate(-1)}
         className="bg-[#FD5D14] text-white px-6 py-2 rounded shadow hover:bg-[#e14e0e] transition duration-200"
       >
         ← Go Back
-      </button>
+      </Button>
     </div>
   );
 };
