@@ -11,8 +11,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<LandingPage />} />
-          <Route path="projects" element={<ProjectPage />} />
+          <Route path="projects" >
+            <Route index element={<ProjectPage />} />                 {/* /projects */}          {/* /projects/:id */}
+          </Route>
         </Route>
+
       </Routes>
     </BrowserRouter>
   );
