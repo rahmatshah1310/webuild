@@ -28,7 +28,7 @@ const ServiceModal = ({ service, onClose }) => {
         <img
           src={service.img}
           alt={service.title}
-          className="w-full h-[300px] md:h-[400px] object-cover mb-4 rounded"
+          className="w-full h-[300px] md:h-[400px] object-cover mb-4 rounded object-[center_10%]"
         />
         <h2 className="text-2xl md:text-3xl font-bold text-[#040F28] mb-2 uppercase">
           {service.title}
