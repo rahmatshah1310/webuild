@@ -67,21 +67,25 @@ export const testimonials = [
 
 export const teamMembers = [
     {
+        id:1,
         name: "Adam Phillips",
         role: "CEO & Founder",
         image: team1,
     },
     {
+        id:2,
         name: "Dylan Adams",
         role: "Civil Engineer",
         image: team2,
     },
     {
+        id:3,
         name: "Jhon Doe",
         role: "Interior Designer",
         image: team3,
     },
     {
+        id:4,
         name: "Josh Dunn",
         role: "Painter",
         image: team4,
