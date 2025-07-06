@@ -1,47 +1,90 @@
-import React from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { FaUserTie, FaGlobe, FaProjectDiagram, FaFileContract, FaClipboardList, FaShoppingCart, FaBullhorn, FaChartLine, FaLaptopCode, FaCogs, FaTruck } from 'react-icons/fa';
 
-const OrganizationalStructure = () => {
+const OrgStructureTimeline = () => {
   return (
-    <section className="py-10 px-4 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-10 uppercase">
-        Organizational Structure
-      </h2>
+    <div className="bg-white min-h-screen py-10 px-4 md:px-20">
+      <h1 className="text-3xl font-bold text-center mb-12">Organizational Structure</h1>
+      <VerticalTimeline lineColor="#d4af37">
 
-      {/* Top Section: General Director & CEO */}
-      <div className="flex flex-col items-center gap-4 mb-8">
-        <div className="bg-black text-yellow-400 px-6 py-2 rounded-full font-bold uppercase">General Director</div>
-        <div className="bg-black text-yellow-400 px-6 py-2 rounded-full font-bold uppercase">CEO</div>
-      </div>
+        {/* GENERAL DIRECTOR */}
+        <VerticalTimelineElement
+          contentStyle={{ background: '#000', color: '#fff' }}
+          contentArrowStyle={{ borderRight: '7px solid  #000' }}
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaUserTie />}
+        >
+          <h3 className="vertical-timeline-element-title font-bold">General Director</h3>
+        </VerticalTimelineElement>
 
-      {/* Mid Level */}
-      <div className="flex justify-center flex-wrap gap-4 text-sm sm:text-base text-center mb-8">
-        <span className="text-gray-700 px-3 py-1">Foreign Affairs</span>
-        <span className="text-gray-700 px-3 py-1">Project Management</span>
-        <span className="text-gray-700 px-3 py-1">Administrative Affairs</span>
-        <span className="text-gray-700 px-3 py-1">Contract Management</span>
-        <span className="text-gray-700 px-3 py-1">Quality and Safety</span>
-      </div>
+        {/* CEO */}
+        <VerticalTimelineElement
+          contentStyle={{ background: '#000', color: '#fff' }}
+          contentArrowStyle={{ borderRight: '7px solid  #000' }}
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaUserTie />}
+        >
+          <h3 className="vertical-timeline-element-title font-bold">CEO</h3>
+        </VerticalTimelineElement>
 
-      {/* Bottom Section (Sub-departments) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {[
-          "Supplies - Purchases",
-          "Public Relations",
-          "Marketing",
-          "Website Management",
-          "Engineering and Designs",
-          "Movement Management",
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="bg-[#FD5D14] text-white px-4 py-3 rounded-full text-center font-semibold"
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-    </section>
+        {/* Top-Level Divisions */}
+        <VerticalTimelineElement
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaGlobe />}
+        >
+          <h3 className="text-lg font-semibold">Foreign Affairs</h3>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaProjectDiagram />}
+        >
+          <h3 className="text-lg font-semibold">Project Management</h3>
+        </VerticalTimelineElement>
+
+        {/* Administrative Affairs */}
+        <VerticalTimelineElement
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaClipboardList />}
+        >
+          <h3 className="text-lg font-semibold">Administrative Affairs</h3>
+          <ul className="mt-3 space-y-2 text-sm text-gray-700">
+            <li className="flex items-center gap-2"><FaShoppingCart /> Supplies - Purchases</li>
+            <li className="flex items-center gap-2"><FaBullhorn /> Public Relations</li>
+            <li className="flex items-center gap-2"><FaChartLine /> Marketing</li>
+          </ul>
+        </VerticalTimelineElement>
+
+        {/* Contract Management */}
+        <VerticalTimelineElement
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaFileContract />}
+        >
+          <h3 className="text-lg font-semibold">Contract Management</h3>
+          <ul className="mt-3 space-y-2 text-sm text-gray-700">
+            <li className="flex items-center gap-2"><FaLaptopCode /> Website Management</li>
+            <li className="flex items-center gap-2"><FaCogs /> Engineering and Designs</li>
+          </ul>
+        </VerticalTimelineElement>
+
+        {/* Quality and Safety */}
+        <VerticalTimelineElement
+          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          icon={<FaClipboardList />}
+        >
+          <h3 className="text-lg font-semibold">Quality and Safety</h3>
+          <ul className="mt-3 space-y-2 text-sm text-gray-700">
+            <li className="flex items-center gap-2"><FaTruck /> Movement Management</li>
+          </ul>
+        </VerticalTimelineElement>
+
+      </VerticalTimeline>
+    </div>
   );
 };
 
-export default OrganizationalStructure;
+export default OrgStructureTimeline;
