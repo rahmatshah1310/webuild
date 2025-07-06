@@ -9,6 +9,7 @@ import {
   FaAngleRight,
 } from "react-icons/fa";
 import { BsBuildings } from "react-icons/bs";
+import Button from "../ui/Button";
 
 const Footer = () => {
   return (
@@ -79,9 +80,9 @@ const Footer = () => {
                   className="flex-1 p-4 text-[#040F28] bg-white focus:outline-none"
                   placeholder="Your Email Address"
                 />
-                <button className="bg-[#FD5D14] text-white px-6 py-4 sm:ml-2 hover:opacity-90 transition">
+                <Button className="bg-[#FD5D14] text-white px-6 py-4 sm:ml-2 hover:opacity-90 transition">
                   Sign Up
-                </button>
+                </Button>
               </form>
             </div>
           </div>
