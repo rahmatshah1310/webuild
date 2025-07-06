@@ -3,6 +3,7 @@ import { BsBuildings } from 'react-icons/bs';
 import { VscListSelection } from 'react-icons/vsc';
 import { Link, useLocation } from 'react-router-dom';
 import {navLinks} from '../../constants/data';
+import Button from '../ui/Button';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,12 +31,12 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile Toggle */}
-        <button
+        <Button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden text-white focus:outline-none"
         >
           <VscListSelection className="w-6 h-6" />
-        </button>
+        </Button>
 
         {/* Nav Items */}
         <div
