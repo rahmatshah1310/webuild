@@ -20,8 +20,9 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <a href="/" className="flex items-center mb-4">
+                 <img src="/Logo.png"  alt="Logo" className='w-15 h-15 object-cover scale-100' />
               <h1 className="text-white font-bold uppercase flex items-center gap-2 text-xl md:text-2xl">
-                <BsBuildings className="text-[#FD5D14] text-4xl" />
+                {/* <BsBuildings className="text-[#FD5D14] text-4xl" /> */}
                 Safe Leaders Innovation
               </h1>
             </a>
