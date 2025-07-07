@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import TopBar from '../components/layout/TopBar';
-import Footer from '../components/layout/Footer';
-import Navbar from '../components/layout/Navbar';
 import { Link, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -45,9 +42,6 @@ const LandingPage = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedMember, setSelectedMember] = useState(null);
     const previewProjects = completedProjects.slice(0, 8);
-    const { id } = useParams()
-
-
 
     return (
         <div>
@@ -89,71 +83,69 @@ const LandingPage = () => {
 
 
             {/* <!-- About Start --> */}
-            <section className="w-full py-12 px-5" id='about'>
-                <div className="flex flex-col lg:flex-row gap-10">
-                    {/* Left Content */}
-                    <div className="lg:w-7/12 w-full">
-                        <h1 className="text-4xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
-                            We are <span className="text-[#FD5D14]">the Leader</span> in Construction Industry
-                        </h1>
-                        <h4 className="uppercase text-lg mb-3 text-gray-600">
-                            Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum tempor sit diam amet diam et eos labore
-                        </h4>
-                        <p className="mb-4 text-gray-700">
-                            Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit
-                            consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed
-                            stet no labore lorem sit. Sanctus clita duo justo et tempor
-                        </p>
+           <section className="w-full py-12 px-5" id='about'>
+    <div className="flex flex-col lg:flex-row gap-10">
+        {/* Left Content */}
+        <div className="lg:w-7/12 w-full">
+            <h1 className="text-4xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
+                We are <span className="text-[#FD5D14]">the Leader</span> in Construction Industry
+            </h1>
+            <h4 className="uppercase text-lg mb-3 text-gray-600">
+                Building with precision, integrity, and innovation—every step of the way.
+            </h4>
+            <p className="mb-4 text-gray-700">
+                With years of experience and a commitment to excellence, we have earned our position as a trusted leader in the construction industry. Our team delivers high-quality results across residential, commercial, and industrial projects—driven by innovation, safety, and customer satisfaction.
+            </p>
 
-                        {/* Features */}
-                        <div className="flex py-2 gap-x-10">
-                            {/* Column 1 */}
-                            <div className="sm:w-1/2 w-full mb-2">
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> Perfect Planning
-                                </p>
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> Professional Workers
-                                </p>
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> First Working Process
-                                </p>
-                            </div>
-
-                            {/* Column 2 */}
-                            <div className="sm:w-1/2 w-full mb-2">
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> Perfect Planning
-                                </p>
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> Professional Workers
-                                </p>
-                                <p className="font-semibold mb-2 flex items-center">
-                                    <FaCheck className="text-primary mr-3" /> First Working Process
-                                </p>
-                            </div>
-                        </div>
-
-                        <p className="mb-4 text-gray-700">
-                            Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit
-                            consetetur sit. Aliquyam diam amet diam et eos labore
-                        </p>
-
-                        <img src={signatureImg} alt="Signature" className="w-auto h-20 object-contain" />
-                    </div>
-
-                    {/* Right Image */}
-                    <div className="lg:w-5/12 w-full min-h-[300px] h-[300px] sm:h-[400px] relative">
-                        <div className="relative h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden">
-                            <img
-                                src={aboutImg}
-                                alt="About"
-                                className="w-full h-full object-cover object-[center_20%] "
-                            />
-                        </div>
-                    </div>
+            {/* Features */}
+            <div className="flex py-2 gap-x-10">
+                {/* Column 1 */}
+                <div className="sm:w-1/2 w-full mb-2">
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> Perfect Planning
+                    </p>
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> Professional Workers
+                    </p>
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> First Working Process
+                    </p>
                 </div>
-            </section>
+
+                {/* Column 2 */}
+                <div className="sm:w-1/2 w-full mb-2">
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> Timely Delivery
+                    </p>
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> High-Quality Materials
+                    </p>
+                    <p className="font-semibold mb-2 flex items-center">
+                        <FaCheck className="text-primary mr-3" /> Client-Centered Approach
+                    </p>
+                </div>
+            </div>
+
+            <p className="mb-4 text-gray-700">
+                From groundbreaking to finishing touches, our process is designed to ensure quality and efficiency at every phase. We take pride in our skilled workforce, our strategic planning, and our ability to turn ideas into enduring structures that exceed expectations.
+            </p>
+
+            <img src={signatureImg} alt="Signature" className="w-auto h-20 object-contain" />
+        </div>
+
+        {/* Right Image */}
+        <div className="lg:w-5/12 w-full min-h-[300px] h-[300px] sm:h-[400px] relative">
+            <div className="relative h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden">
+                <img
+                    src={aboutImg}
+                    alt="About"
+                    className="w-full h-full object-cover object-[center_20%] "
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
             {/* <!-- About End --> */}
 
 
@@ -205,6 +197,7 @@ const LandingPage = () => {
             {/* <!-- Services End --> */}
 
             <OrgStructureTimeline />
+            
             {/* <!-- Appointment Start --> */}
             <ContactSection />
             {/* <!-- Appointment End --> */}
