@@ -24,8 +24,9 @@ const Navbar = () => {
       <nav className="flex items-center justify-between md:px-15 px-6 flex-wrap text-white py-7">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <h1 className="font-extrabold uppercase text-white flex items-center">
-            <BsBuildings className="text-[#FD5D14] text-4xl mr-2" />
+           <img src="/Logo.png"  alt="Logo" className='w-15 h-15 object-cover scale-100' />
+           <h1 className="font-extrabold uppercase text-white flex items-center  ">
+            {/* <BsBuildings className="text-[#FD5D14] text-4xl mr-2" /> */}
             SAFE LEADERS INNOVATION
           </h1>
         </Link>
