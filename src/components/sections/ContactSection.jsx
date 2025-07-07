@@ -35,12 +35,10 @@ const ContactSection = () => {
                             Request A <span className="text-[#FD5D14]">Call Back</span>
                         </h1>
                     </div>
-                    <p className="text-gray-700 mb-6">
-                        Nonumy ipsum amet tempor takimata vero ea elitr. Diam diam ut et eos duo duo sed. Lorem elitr sadipscing eos et ut et stet
-                        justo, sit dolore et voluptua labore. Ipsum erat et ea ipsum magna sadipscing lorem. Sit lorem sea sanctus eos. Sanctus sit
-                        tempor dolores ipsum stet justo sit erat ea, sed diam sanctus takimata sit. Et at voluptua amet erat justo amet ea ipsum eos,
-                        eirmod accusam sea sed ipsum kasd ut.
-                    </p>
+                   <p className="text-gray-700 mb-6">
+    Have questions or need assistance with your construction project? Our expert team is ready to help. Simply request a callback at a time that works for you, and one of our professionals will reach out to discuss your needs, answer your questions, and guide you through the next steps with confidence and clarity.
+</p>
+
                     <Link
                         to="#"
                         className="inline-block bg-[#FD5D14] text-white font-medium py-3 px-6 transition"
