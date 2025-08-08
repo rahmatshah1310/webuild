@@ -4,10 +4,6 @@ import blog1 from "../assets/images/blog-1.jpg";
 import blog2 from "../assets/images/blog-2.jpg";
 import blog3 from "../assets/images/blog-3.jpg";
 // import team1 from "../assets/images/team-1.jpg";
-import team2 from "../assets/images/team-2.jpg";
-import team3 from "../assets/images/team-3.jpg";
-import team4 from "../assets/images/team-4.jpg";
-import ceoImage from "../assets/images/ceoImage.jpg";
 import portfolio1 from "../assets/images/portfolio-1.jpg";
 import portfolio2 from "../assets/images/portfolio-2.jpg";
 import portfolio3 from "../assets/images/portfolio-3.jpg";
@@ -23,155 +19,197 @@ import service6 from "../assets/images/service-6.jpg";
 import carousel1 from "../assets/images/carousel-1.jpg";
 import carousel2 from "../assets/images/carousel-2.jpg";
 import { GiTrenchSpade } from "react-icons/gi";
-import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding,FaHardHat ,
-    FaDraftingCompass, } from "react-icons/fa";
+import hafizurrahman from "../assets/images/hafizurahman.jpg";
+import irfanullah from "../assets/images/irfanullah.jpg";
+import khurshid from "../assets/images/khurshid.jpg";
+import rashidahmad from "../assets/images/rashidahmad.jpg";
 
+import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding, FaHardHat, FaDraftingCompass } from "react-icons/fa";
 
 export const navLinks = [
-  { label: 'Home', hash: '#home' },
-  { label: 'About', hash: '#about' },
-  { label: 'Service', hash: '#service' },
-  { label: 'Contact', hash: '#contact' },
-];
-   
-export const blogPosts = [
-    {
-        title: "Rebum diam clita lorem erat magna est erat",
-        author: "John Doe",
-        date: "01 Jan, 2045",
-        image: blog1,
-    },
-    {
-        title: "Rebum diam clita lorem erat magna est erat",
-        author: "John Doe",
-        date: "01 Jan, 2045",
-        image: blog2,
-    },
-    {
-        title: "Rebum diam clita lorem erat magna est erat",
-        author: "John Doe",
-        date: "01 Jan, 2045",
-        image: blog3,
-    },
+  { label: "Home", hash: "#home" },
+  { label: "About", hash: "#about" },
+  { label: "Service", hash: "#service" },
+  { label: "Contact", hash: "#contact" },
 ];
 
+export const blogPosts = [
+  {
+    title: "Rebum diam clita lorem erat magna est erat",
+    author: "John Doe",
+    date: "01 Jan, 2045",
+    image: blog1,
+  },
+  {
+    title: "Rebum diam clita lorem erat magna est erat",
+    author: "John Doe",
+    date: "01 Jan, 2045",
+    image: blog2,
+  },
+  {
+    title: "Rebum diam clita lorem erat magna est erat",
+    author: "John Doe",
+    date: "01 Jan, 2045",
+    image: blog3,
+  },
+];
 
 export const testimonials = [
-    {
-        name: "Client Name",
-        profession: "Profession",
-        image: testimonialImage1,
-        text: `Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. 
+  {
+    name: "Client Name",
+    profession: "Profession",
+    image: testimonialImage1,
+    text: `Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. 
     At lorem lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit ipsum.`,
-    },
-    {
-        name: "Client Name",
-        profession: "Profession",
-        image: testimonialImage2,
-        text: `Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. 
+  },
+  {
+    name: "Client Name",
+    profession: "Profession",
+    image: testimonialImage2,
+    text: `Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. 
     At lorem lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit ipsum.`,
-    },
+  },
 ];
-
-
 
 export const teamMembers = [
-    {
-        id:1,
-        name: "Hafiz Ur Rahman",
-        role: "CEO & Founder",
-        image: ceoImage,
-    },
-    {
-        id:2,
-        name: "Dylan Adams",
-        role: "Civil Engineer",
-        image: team2,
-    },
-    {
-        id:3,
-        name: "Jhon Doe",
-        role: "Interior Designer",
-        image: team3,
-    },
-    {
-        id:4,
-        name: "Josh Dunn",
-        role: "Painter",
-        image: team4,
-    },
+  {
+    id: 1,
+    name: "Hafiz Ur Rahman",
+    role: "CEO & Founder",
+    image: hafizurrahman,
+    bio: `As Chief Executive Officer of Safe Leaders Innovation Construction Company, Hafiz Ur Rahman provides visionary leadership and strategic direction, guiding the organization towards sustainable growth and industry excellence. With extensive experience in the construction sector, he is committed to delivering innovative solutions that combine quality, safety, and efficiency.
+
+His leadership philosophy focuses on building long-term client relationships, expanding the company’s capabilities, and positioning it as a market leader. Beyond overseeing operations, he actively shapes the company’s mission, values, and culture. By fostering a high-performance environment and encouraging innovation at all levels, he ensures the company remains at the forefront of industry advancements.
+
+His unwavering dedication to excellence, integrity, and customer satisfaction continues to drive the company’s success and strengthen its reputation as a trusted construction partner.`,
+  },
+  {
+    id: 2,
+    name: "Irfan Ullah",
+    role: "General Manager",
+    image: irfanullah,
+    bio: `As General Manager of Safe Leaders Innovation Construction Company, Irfan Ullah provides strategic leadership and oversees the company’s operational and project management functions. With a proven track record in delivering complex construction projects, he ensures that every undertaking reflects the company’s commitment to quality, safety, and innovation.
+
+His strategic vision guides the organization in achieving sustainable growth, strengthening client partnerships, and maintaining a competitive edge in the industry. He fosters a professional work environment built on teamwork, integrity, and continuous improvement. By aligning operational processes with industry best practices, he ensures efficiency and excellence at every stage.`,
+  },
+  {
+    id: 3,
+    name: "Khurshed Ahmad",
+    role: "Deputy Director",
+    image: khurshid,
+    bio: `As Deputy Director at Safe Leaders Innovation Construction Company, Khurshed Ahmad plays a pivotal role in overseeing project execution, operational planning, and quality assurance. Working closely with the General Manager and senior leadership, he ensures that projects are delivered on schedule, within budget, and in full compliance with safety and quality standards.
+
+His expertise in operational oversight and process optimization significantly contributes to the company’s ability to consistently exceed client expectations. By fostering a collaborative and efficient work culture, he empowers teams to perform at their highest potential while implementing innovative solutions to address project challenges.`,
+  },
+  {
+    id: 4,
+    name: "Rashid Ahmad",
+    role: "Director",
+    image: rashidahmad,
+    bio: `As Director of Safe Leaders Innovation Construction Company, Rashid Ahmad plays a central role in steering the organization’s strategic initiatives and overseeing key operational functions. With a strong background in management and a deep understanding of the construction industry, he is instrumental in driving the company’s mission to deliver projects that embody quality, safety, and innovation.
+
+He fosters a culture of accountability, collaboration, and continuous improvement across all departments. By promoting efficient workflows and supporting innovation, he enables teams to deliver exceptional results while meeting project timelines and budgets. His commitment to operational excellence and client satisfaction reinforces the company’s position as a trusted and forward-thinking industry leader.`,
+  },
 ];
 
-
 export const categories = [
-    { name: "All", filter: "*" },
-    { name: "Construction", filter: "construction" },
-    { name: "Renovation", filter: "renovation" },
+  { name: "All", filter: "*" },
+  { name: "Construction", filter: "construction" },
+  { name: "Renovation", filter: "renovation" },
 ];
 
 export const projects = [
-    { image: portfolio1, category: "construction" },
-    { image: portfolio2, category: "renovation" },
-    { image: portfolio3, category: "construction" },
-    { image: portfolio4, category: "renovation" },
-    { image: portfolio5, category: "construction" },
-    { image: portfolio6, category: "renovation" },
+  { image: portfolio1, category: "construction" },
+  { image: portfolio2, category: "renovation" },
+  { image: portfolio3, category: "construction" },
+  { image: portfolio4, category: "renovation" },
+  { image: portfolio5, category: "construction" },
+  { image: portfolio6, category: "renovation" },
 ];
 export const services = [
-    {
-        title: "Building Construction",
-        icon: <FaBuilding className="text-4xl text-primary" />,
-        img: service1,
-        exp:"Full-scale construction of residential, commercial, and industrial buildings from foundation to completion"
-    },
-    {
-        title: "Road Infrastructure",
-        icon: <FaRoad className="text-4xl text-primary" />,  
-        img: service2,
-        exp:"Construction and development of roads, highways, bridges, and transportation networks"
-    },
-    {
-        title: "Structural Renovation",
-        icon: <FaHouseDamage className="text-4xl text-primary" />,  // Note: Requires FaHouseDamage import
-        img: service3,
-        exp:"Upgrading and modernizing existing structures including load-bearing modifications and extensions"
-    },
-    {
-        title: "Underground Utilities",
-        icon: <GiTrenchSpade className="text-4xl text-primary" />,  // Note: Requires FaTrench import
-        img: service4,
-        exp:"Installation and maintenance of subsurface systems including pipelines, cabling, and drainage systems"
-    },
-    {
-        title: "Civil Engineering",
-        icon: <FaDraftingCompass className="text-4xl text-primary" />,
-        img: service5,
-        exp:" Technical design and planning of infrastructure projects including site analysis and structural calculations"
-    },
-    {
-        title: "Pavement Maintenance",
-        icon: <FaHardHat className="text-4xl text-primary" />,
-        img: service6,
-        exp:"Repair and upkeep of road surfaces, pothole fixing, asphalt restoration, and surface durability enhancement."
-    }
+  {
+    title: "General Constructions",
+    icon: <FaBuilding className="text-4xl text-primary" />,
+    img: service1,
+    exp: "Comprehensive construction solutions across residential, commercial, and industrial sectors.",
+  },
+  {
+    title: "Repair and Maintenance",
+    icon: <FaTools className="text-4xl text-primary" />,
+    img: service2,
+    exp: "Routine and emergency repairs, preventive maintenance, and asset longevity solutions.",
+  },
+  {
+    title: "Drilling Services",
+    icon: <GiTrenchSpade className="text-4xl text-primary" />,
+    img: service3,
+    exp: "Precision drilling for construction, utilities, and infrastructure development.",
+  },
+  {
+    title: "Public Sports Structures",
+    icon: <FaHome className="text-4xl text-primary" />,
+    img: service4,
+    exp: "Design and construction of stadiums, gyms, and recreational sports facilities.",
+  },
+  {
+    title: "Marine Traffic Aids",
+    icon: <FaDraftingCompass className="text-4xl text-primary" />,
+    img: service5,
+    exp: "Installation and maintenance of marine traffic lights and navigational aids.",
+  },
+  {
+    title: "Demolition & Wrecking",
+    icon: <FaHouseDamage className="text-4xl text-primary" />,
+    img: service6,
+    exp: "Controlled demolition of structures with safety and environmental considerations.",
+  },
+  {
+    title: "Landfill Services",
+    icon: <FaHardHat className="text-4xl text-primary" />,
+    img: service1,
+    exp: "Waste disposal, site preparation, and landfill management services.",
+  },
+  {
+    title: "Electrical Wiring",
+    icon: <FaTools className="text-4xl text-primary" />,
+    img: service2,
+    exp: "Electrical installations, upgrades, and maintenance for all property types.",
+  },
+  {
+    title: "Telecommunications Wiring",
+    icon: <FaDraftingCompass className="text-4xl text-primary" />,
+    img: service3,
+    exp: "Structured cabling and wiring for telecom and network systems.",
+  },
+  {
+    title: "Network Wiring",
+    icon: <FaTools className="text-4xl text-primary" />,
+    img: service4,
+    exp: "Installation and maintenance of data network wiring for commercial infrastructures.",
+  },
+  {
+    title: "Installation & Maintenance",
+    icon: <FaHardHat className="text-4xl text-primary" />,
+    img: service5,
+    exp: "End-to-end setup and upkeep of construction, electrical, and infrastructure systems.",
+  },
 ];
 
-
 export const slides = [
-    {
-        image: carousel1,
-        icon: <FaHome className="text-primary text-6xl mb-4 hidden sm:block" />,
-        heading: "Build Your Dream House With Us",
-        buttonText: "Get A Quote",
-        buttonLink: "#",
-    },
-    {
-        image: carousel2,
-        icon: <FaTools className="text-primary text-6xl mb-4 hidden sm:block" />,
-        heading: "We Are Trusted For Your Project",
-        buttonText: "Contact Us",
-        buttonLink: "#",
-    },
+  {
+    image: carousel1,
+    icon: <FaHome className="text-primary text-6xl mb-4 hidden sm:block" />,
+    heading: "Build Your Dream House With Us",
+    buttonText: "Get A Quote",
+    buttonLink: "#",
+  },
+  {
+    image: carousel2,
+    icon: <FaTools className="text-primary text-6xl mb-4 hidden sm:block" />,
+    heading: "We Are Trusted For Your Project",
+    buttonText: "Contact Us",
+    buttonLink: "#",
+  },
 ];
 
 export const completedProjects = [
@@ -210,6 +248,5 @@ export const completedProjects = [
   { id: 33, image: service3, title: "3 Palaces - Private Residence", location: "Hatteen, Riyadh", link: "https://example.com" },
   { id: 34, image: service4, title: "Masharef Hills - 8 Villas", location: "Unknown", link: "https://example.com" },
   { id: 35, image: service5, title: "Labor Housing Project - 5 Buildings", location: "Toowaiq, Riyadh", link: "https://example.com" },
-  { id: 36, image: service6, title: "Jeddah Villas Project", location: "30 iron/glass door works", link: "https://example.com" }
+  { id: 36, image: service6, title: "Jeddah Villas Project", location: "30 iron/glass door works", link: "https://example.com" },
 ];
-
