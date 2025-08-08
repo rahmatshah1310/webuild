@@ -24,7 +24,7 @@ import irfanullah from "../assets/images/irfanullah.jpg";
 import khurshid from "../assets/images/khurshid.jpg";
 import rashidahmad from "../assets/images/rashidahmad.jpg";
 
-import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding, FaHardHat, FaDraftingCompass } from "react-icons/fa";
+import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding, FaHardHat, FaDraftingCompass, FaFireExtinguisher } from "react-icons/fa";
 
 export const navLinks = [
   { label: "Home", hash: "#home" },
@@ -126,6 +126,7 @@ export const projects = [
   { image: portfolio5, category: "construction" },
   { image: portfolio6, category: "renovation" },
 ];
+
 export const services = [
   {
     title: "General Constructions",
@@ -192,6 +193,12 @@ export const services = [
     icon: <FaHardHat className="text-4xl text-primary" />,
     img: service5,
     exp: "End-to-end setup and upkeep of construction, electrical, and infrastructure systems.",
+  },
+  {
+    title: "Civil Defence Work",
+    icon: <FaFireExtinguisher className="text-4xl text-primary" />,
+    img: service6,
+    exp: "Fire alarm and fire fighting system installation and maintenance for safety compliance.",
   },
 ];
 
