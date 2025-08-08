@@ -141,6 +141,7 @@ const LandingPage = () => {
               <div className="px-4 flex flex-col items-center">
                 <div className="mb-4 transform transition-transform duration-300 group-hover:scale-150 rounded-full bg-white p-4">{service.icon}</div>
                 <h4 className="text-xl font-semibold uppercase mb-3">{service.title}</h4>
+                <p className="text-gray-600 mb-4">{service.para}</p>
                 <Button
                   onClick={() => setSelectedService(service)}
                   className="inline-flex items-center gap-1 text-[#FD5D14] font-bold uppercase pb-5 hover:underline cursor-pointer"
