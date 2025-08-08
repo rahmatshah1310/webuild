@@ -1,304 +1,248 @@
-import React, { useState } from 'react'
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import signatureImg from "../assets/images/signature.jpg";
+import signatureImg from "../assets/images/signature.png";
 import aboutImg from "../assets/images/about.jpg";
 import { FaCheck } from "react-icons/fa";
 import { BiPlus } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import portfolio1 from "../assets/images/portfolio-1.jpg";
-import portfolio2 from "../assets/images/portfolio-2.jpg";
-import portfolio3 from "../assets/images/portfolio-3.jpg";
-import {
-    FaTwitter,
-    FaFacebookF,
-    FaLinkedinIn,
-    FaInstagram,
-    FaYoutube,
-} from "react-icons/fa";
-import testimonialImage from "../assets/images/testimonial.jpg";
+// import portfolio1 from "../assets/images/portfolio-1.jpg";
+// import portfolio2 from "../assets/images/portfolio-2.jpg";
+// import portfolio3 from "../assets/images/portfolio-3.jpg";
+import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+// import testimonialImage from "../assets/images/testimonial.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaQuoteLeft } from "react-icons/fa";
-import userImg from "../assets/images/user.jpg";
+// import { FaQuoteLeft } from "react-icons/fa";
+// import userImg from "../assets/images/user.jpg";
 import { BiCalendarAlt, BiArrowFromRight } from "react-icons/bi";
-import { blogPosts, categories, completedProjects, projects, services, slides, teamMembers, testimonials } from '../constants/data.jsx';
+import { completedProjects, services, slides, teamMembers } from "../constants/data.jsx";
 import { GoArrowRight } from "react-icons/go";
-import ServiceModal from '../components/modal/ServiceModal.jsx';
-import ContactSection from '../components/sections/ContactSection.jsx';
-import OrgStructureTimeline from '../components/sections/OrganizationStructure.jsx';
-import TeamModal from '../components/modal/TeamModal';
-import Button from '../components/ui/Button.jsx';
-
-
-
-
+import ServiceModal from "../components/modal/ServiceModal.jsx";
+import ContactSection from "../components/sections/ContactSection.jsx";
+import OrgStructureTimeline from "../components/sections/OrganizationStructure.jsx";
+import TeamModal from "../components/modal/TeamModal";
+import Button from "../components/ui/Button.jsx";
 
 const LandingPage = () => {
-    const [selectedService, setSelectedService] = useState(null);
-    const [selectedMember, setSelectedMember] = useState(null);
-    const previewProjects = completedProjects.slice(0, 8);
+  const [selectedService, setSelectedService] = useState(null);
+  const [selectedMember, setSelectedMember] = useState(null);
+  const previewProjects = completedProjects.slice(0, 8);
 
-    return (
-        <div>
-            {/* <!-- Carousel Start --> */}
-            <section className="relative w-full" id='home'>
-                <Swiper
-                    modules={[Autoplay, Navigation, Pagination]}
-                    autoplay={{ delay: 5000 }}
-                    pagination={{ clickable: true }}
-                    loop
-                    className="w-full h-full"
-                >
-                    {slides.map((slide, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="relative w-full h-full">
-                                <img
-                                    src={slide.image}
-                                    alt="Slide"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                                    <div className="text-center text-white px-4 max-w-3xl flex flex-col items-center justify-center space-y-6">
-                                        <div className="text-5xl text-[#FD5D14]">{slide.icon}</div>
-                                        <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">
-                                            {slide.heading}
-                                        </h1>
-                                        <Button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
-                                            {slide.buttonText}
-                                        </Button>
+  return (
+    <div>
+      {/* <!-- Carousel Start --> */}
+      <section className="relative w-full" id="home">
+        <Swiper modules={[Autoplay, Navigation, Pagination]} autoplay={{ delay: 5000 }} pagination={{ clickable: true }} loop className="w-full h-full">
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative w-full h-full">
+                <img src={slide.image} alt="Slide" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <div className="text-center text-white px-4 max-w-3xl flex flex-col items-center justify-center space-y-6">
+                    <div className="text-5xl text-[#FD5D14]">{slide.icon}</div>
+                    <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">{slide.heading}</h1>
+                    <Button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
+                      {slide.buttonText}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+      {/* <!-- Carousel End --> */}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </section>
-            {/* <!-- Carousel End --> */}
-
-
-            {/* <!-- About Start --> */}
-           <section className="w-full py-12 px-5" id='about'>
-    <div className="flex flex-col lg:flex-row gap-10">
-        {/* Left Content */}
-        <div className="lg:w-7/12 w-full">
+      {/* <!-- About Start --> */}
+      <section className="w-full py-12 px-5" id="about">
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Left Content */}
+          <div className="lg:w-7/12 w-full">
             <h1 className="text-4xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
-                We are <span className="text-[#FD5D14]">the Leader</span> in Construction Industry
+              We are <span className="text-[#FD5D14]">the Leader</span> in Construction Industry
             </h1>
-            <h4 className="uppercase text-lg mb-3 text-gray-600">
-                Building with precision, integrity, and innovation—every step of the way.
-            </h4>
+            <h4 className="uppercase text-lg mb-3 text-gray-600">Building with precision, integrity, and innovation—every step of the way.</h4>
             <p className="mb-4 text-gray-700">
-                With years of experience and a commitment to excellence, we have earned our position as a trusted leader in the construction industry. Our team delivers high-quality results across residential, commercial, and industrial projects—driven by innovation, safety, and customer satisfaction.
+              With years of experience and a commitment to excellence, we have earned our position as a trusted leader in the construction industry. Our team
+              delivers high-quality results across residential, commercial, and industrial projects—driven by innovation, safety, and customer satisfaction.
             </p>
 
             {/* Features */}
             <div className="flex py-2 gap-x-10">
-                {/* Column 1 */}
-                <div className="sm:w-1/2 w-full mb-2">
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> Perfect Planning
-                    </p>
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> Professional Workers
-                    </p>
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> First Working Process
-                    </p>
-                </div>
+              {/* Column 1 */}
+              <div className="sm:w-1/2 w-full mb-2">
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> Perfect Planning
+                </p>
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> Professional Workers
+                </p>
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> First Working Process
+                </p>
+              </div>
 
-                {/* Column 2 */}
-                <div className="sm:w-1/2 w-full mb-2">
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> Timely Delivery
-                    </p>
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> High-Quality Materials
-                    </p>
-                    <p className="font-semibold mb-2 flex items-center">
-                        <FaCheck className="text-primary mr-3" /> Client-Centered Approach
-                    </p>
-                </div>
+              {/* Column 2 */}
+              <div className="sm:w-1/2 w-full mb-2">
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> Timely Delivery
+                </p>
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> High-Quality Materials
+                </p>
+                <p className="font-semibold mb-2 flex items-center">
+                  <FaCheck className="text-primary mr-3" /> Client-Centered Approach
+                </p>
+              </div>
             </div>
 
             <p className="mb-4 text-gray-700">
-                From groundbreaking to finishing touches, our process is designed to ensure quality and efficiency at every phase. We take pride in our skilled workforce, our strategic planning, and our ability to turn ideas into enduring structures that exceed expectations.
+              From groundbreaking to finishing touches, our process is designed to ensure quality and efficiency at every phase. We take pride in our skilled
+              workforce, our strategic planning, and our ability to turn ideas into enduring structures that exceed expectations.
             </p>
 
             <img src={signatureImg} alt="Signature" className="w-auto h-20 object-contain" />
-        </div>
+          </div>
 
-        {/* Right Image */}
-        <div className="lg:w-5/12 w-full min-h-[300px] h-[300px] sm:h-[400px] relative">
+          {/* Right Image */}
+          <div className="lg:w-5/12 w-full min-h-[300px] h-[300px] sm:h-[400px] relative">
             <div className="relative h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden">
-                <img
-                    src={aboutImg}
-                    alt="About"
-                    className="w-full h-full object-cover object-[center_20%] "
-                />
+              <img src={aboutImg} alt="About" className="w-full h-full object-cover object-[center_20%] " />
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-            {/* <!-- About End --> */}
+      {/* <!-- About End --> */}
 
+      {/* <!-- Services Start --> */}
+      <section className="bg-gray-100 py-16 px-4" id="service">
+        {/* Heading */}
+        <div className="max-w-xl mx-auto text-center mb-10">
+          <h1 className="text-4xl sm:text-3xl font-extrabold uppercase mb-4 text-[#040F28]">
+            <span className="text-[#FD5D14]">Construction </span>and <span className="text-[#FD5D14]">renovation</span> of buildings and roads and underground
+            services.
+          </h1>
+        </div>
 
-            {/* <!-- Services Start --> */}
-            <section className="bg-gray-100 py-16 px-4" id="service">
-                {/* Heading */}
-                <div className="max-w-xl mx-auto text-center mb-10">
-                    <h1 className="text-4xl sm:text-3xl font-extrabold uppercase mb-4 text-[#040F28]">
-                        <span className="text-[#FD5D14]">Construction </span>and{" "}
-                        <span className="text-[#FD5D14]">renovation</span> of buildings and roads and underground services.
-                    </h1>
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-white text-[#FD5D14] rounded-md flex flex-col items-center text-center shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+              <img src={service.img} alt={service.title} className="w-full h-56 object-cover object-[center_20%]" />
+              <div className="px-4 flex flex-col items-center">
+                <div className="mb-4 transform transition-transform duration-300 group-hover:scale-150 rounded-full bg-white p-4">{service.icon}</div>
+                <h4 className="text-xl font-semibold uppercase mb-3">{service.title}</h4>
+                <p className="text-gray-600 mb-4">{service.exp}</p>
+                <Button
+                  onClick={() => setSelectedService(service)}
+                  className="inline-flex items-center gap-1 text-[#FD5D14] font-bold uppercase pb-5 hover:underline cursor-pointer"
+                >
+                  Read More <GoArrowRight />
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Modal Component */}
+        <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
+      </section>
+      {/* <!-- Services End --> */}
+
+      <OrgStructureTimeline />
+
+      {/* <!-- Appointment Start --> */}
+      <ContactSection />
+      {/* <!-- Appointment End --> */}
+
+      {/* <!-- Portfolio Start --> */}
+      <section className="w-full bg-gray-100 py-16 px-5">
+        {/* Heading */}
+        <div className="max-w-xl mx-auto text-center mb-10">
+          <h1 className="text-4xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
+            Some Of Our <span className="text-[#FD5D14]">Popular</span> Dream Projects
+          </h1>
+        </div>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          {previewProjects.map((project, index) => (
+            <Link
+              key={index}
+              to={`/projects/${project.id}`} // <-- Customize this route as needed
+              className="relative group overflow-hidden rounded shadow-md block"
+            >
+              <img src={project.image} alt={project.title} className="w-full h-[260px] object-cover transition-transform group-hover:scale-105 duration-300" />
+              <div className="absolute inset-0 bg-black/30 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition p-4">
+                <div className="bg-white p-3 shadow rounded mb-2">
+                  <p className="text-lg font-bold uppercase">{project.title}</p>
+                  <span className="text-sm text-gray-600 flex items-center mt-1">
+                    <FaMapMarkerAlt className="text-primary mr-2" />
+                    {project.location}
+                  </span>
                 </div>
+              </div>
 
-                {/* Services Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group bg-white text-[#FD5D14] rounded-md flex flex-col items-center text-center shadow-md overflow-hidden hover:shadow-lg transition"
-                        >
-                            <img
-                                src={service.img}
-                                alt={service.title}
-                                className="w-full h-56 object-cover object-[center_20%]"
-                            />
-                            <div className="px-4 flex flex-col items-center">
-                                <div className="mb-4 transform transition-transform duration-300 group-hover:scale-150 rounded-full bg-white p-4">
-                                    {service.icon}
-                                </div>
-                                <h4 className="text-xl font-semibold uppercase mb-3">{service.title}</h4>
-                                <p className="text-gray-600 mb-4">{service.exp}</p>
-                                <Button
-                                    onClick={() => setSelectedService(service)}
-                                    className="inline-flex items-center gap-1 text-[#FD5D14] font-bold uppercase pb-5 hover:underline cursor-pointer"
-                                >
-                                    Read More <GoArrowRight />
-                                </Button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+              {/* Optional: Keep the plus icon for UX */}
+              <div className="absolute right-3 top-3 bg-primary p-2 rounded-full">
+                <BiPlus className="text-white text-xl" />
+              </div>
+            </Link>
+          ))}
+        </div>
 
-                {/* Modal Component */}
-                <ServiceModal
-                    service={selectedService}
-                    onClose={() => setSelectedService(null)}
-                />
-            </section>
-            {/* <!-- Services End --> */}
+        {completedProjects.length > 8 && (
+          <div className="text-center mt-10">
+            <Link to="/projects" className="inline-block bg-[#FD5D14] text-white py-3 px-6 rounded-md font-semibold hover:bg-[#e14e0e] transition">
+              View More Projects
+            </Link>
+          </div>
+        )}
+      </section>
+      {/* <!-- Portfolio End --> */}
 
-            <OrgStructureTimeline />
-            
-            {/* <!-- Appointment Start --> */}
-            <ContactSection />
-            {/* <!-- Appointment End --> */}
+      {/* <!-- Team Start --> */}
 
+      <section className="w-full bg-white py-16 px-5">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h1 className="text-5xl sm:text-5xl font-bold uppercase mb-4 text-[#040F28]">
+            We Are <span className="text-[#FD5D14]">Professional & Expert</span> Workers
+          </h1>
+        </div>
 
-            {/* <!-- Portfolio Start --> */}
-            <section className="w-full bg-gray-100 py-16 px-5">
-                {/* Heading */}
-                <div className="max-w-xl mx-auto text-center mb-10">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
-                        Some Of Our <span className="text-[#FD5D14]">Popular</span> Dream Projects
-                    </h1>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {teamMembers.map((member, index) => (
+            <Link
+              key={index}
+              onClick={() => setSelectedMember(member)}
+              className="flex flex-col bg-gray-100 rounded-md overflow-hidden shadow-md hover:shadow-lg transition"
+            >
+              <div className="">
+                <img src={member.image} alt={member.name} className="w-full h-[390px] object-cover object-[center_20%] align-middle" />
+              </div>
+              <div className="p-4 text-center">
+                <h4 className="text-xl font-semibold uppercase">{member.name}</h4>
+                <span className="text-sm text-gray-500">{member.role}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <TeamModal member={selectedMember} onClose={() => setSelectedMember(null)} />
+      </section>
 
-                {/* Project Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                    {previewProjects.map((project, index) => (
-                        <Link
-                            key={index}
-                            to={`/projects/${project.id}`} // <-- Customize this route as needed
-                            className="relative group overflow-hidden rounded shadow-md block"
-                        >
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-[260px] object-cover transition-transform group-hover:scale-105 duration-300"
-                            />
-                            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition p-4">
-                                <div className="bg-white p-3 shadow rounded mb-2">
-                                    <p className="text-lg font-bold uppercase">{project.title}</p>
-                                    <span className="text-sm text-gray-600 flex items-center mt-1">
-                                        <FaMapMarkerAlt className="text-primary mr-2" />
-                                        {project.location}
-                                    </span>
-                                </div>
-                            </div>
+      {/* <!-- Team End --> */}
 
-                            {/* Optional: Keep the plus icon for UX */}
-                            <div className="absolute right-3 top-3 bg-primary p-2 rounded-full">
-                                <BiPlus className="text-white text-xl" />
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-
-                {completedProjects.length > 8 && (
-                    <div className="text-center mt-10">
-                        <Link
-                            to="/projects"
-                            className="inline-block bg-[#FD5D14] text-white py-3 px-6 rounded-md font-semibold hover:bg-[#e14e0e] transition"
-                        >
-                            View More Projects
-                        </Link>
-                    </div>
-                )}
-            </section>
-            {/* <!-- Portfolio End --> */}
-
-
-            {/* <!-- Team Start --> */}
-
-            <section className="w-full bg-white py-16 px-5">
-                <div className="max-w-3xl mx-auto text-center mb-10">
-                    <h1 className="text-5xl sm:text-5xl font-bold uppercase mb-4 text-[#040F28]">
-                        We Are <span className="text-[#FD5D14]">Professional & Expert</span> Workers
-                    </h1>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                    {teamMembers.map((member, index) => (
-                        <Link
-                            key={index}
-                            onClick={() => setSelectedMember(member)}
-                            className="flex flex-col bg-gray-100 rounded-md overflow-hidden shadow-md hover:shadow-lg transition"
-                        >
-                            <div className="">
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className="w-full h-[390px] object-cover object-[center_20%] align-middle"
-                                />
-                            </div>
-                            <div className="p-4 text-center">
-                                <h4 className="text-xl font-semibold uppercase">{member.name}</h4>
-                                <span className="text-sm text-gray-500">{member.role}</span>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-                <TeamModal
-                    member={selectedMember}
-                    onClose={() => setSelectedMember(null)}
-                />
-
-            </section>
-
-            {/* <!-- Team End --> */}
-
-
-            {/* <!-- Testimonial Start --> */}
-            {/* <section className="bg-gray-100 py-16 px-5">
+      {/* <!-- Testimonial Start --> */}
+      {/* <section className="bg-gray-100 py-16 px-5">
                 <div className="max-w-3xl mx-auto text-center mb-10">
                     <h1 className="text-6xl font-bold uppercase mb-4 text-[#040F28]">
                         What Our <span className="text-[#FD5D14]">Happy Clients</span> Say!!!
@@ -349,11 +293,10 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section> */}
-            {/* <!-- Testimonial End --> */}
+      {/* <!-- Testimonial End --> */}
 
-
-            {/* <!-- Blog Start --> */}
-            {/* <section className="w-full bg-white py-16 px-6 ">
+      {/* <!-- Blog Start --> */}
+      {/* <section className="w-full bg-white py-16 px-6 ">
                 <div className="max-w-xl mx-auto text-center mb-10">
                     <h1 className="text-3xl sm:text-5xl font-extrabold uppercase mb-4 text-[#040F28]">
                         Latest <span className="text-[#FD5D14]">Articles</span> From Our Blog Post
@@ -394,9 +337,9 @@ const LandingPage = () => {
                     ))}
                 </div>
             </section> */}
-            {/* <!-- Blog End --> */}
-        </div>
-    )
-}
+      {/* <!-- Blog End --> */}
+    </div>
+  );
+};
 
 export default LandingPage;
