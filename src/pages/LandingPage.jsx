@@ -46,9 +46,6 @@ const LandingPage = () => {
                   <div className="text-center text-white px-4 max-w-3xl flex flex-col items-center justify-center space-y-6">
                     <div className="text-5xl text-[#FD5D14]">{slide.icon}</div>
                     <h1 className="text-2xl sm:text-6xl font-extrabold uppercase">{slide.heading}</h1>
-                    <Button className="inline-block bg-[#FD5D14] text-white px-5 py-2.5 sm:px-10 sm:py-3 text-base font-medium transition cursor-pointer">
-                      {slide.buttonText}
-                    </Button>
                   </div>
                 </div>
               </div>
