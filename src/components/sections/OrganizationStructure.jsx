@@ -1,87 +1,88 @@
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { FaUserTie, FaGlobe, FaProjectDiagram, FaFileContract, FaClipboardList, FaShoppingCart, FaBullhorn, FaChartLine, FaLaptopCode, FaCogs, FaTruck } from 'react-icons/fa';
+  FaUserTie,
+  FaGlobe,
+  FaProjectDiagram,
+  FaFileContract,
+  FaClipboardList,
+  FaShoppingCart,
+  FaBullhorn,
+  FaChartLine,
+  FaLaptopCode,
+  FaCogs,
+  FaTruck,
+} from "react-icons/fa";
 
 const OrgStructureTimeline = () => {
   return (
     <div className="bg-white min-h-screen py-10 px-4 md:px-20">
       <h1 className="text-3xl font-bold text-center mb-12">Organizational Structure</h1>
       <VerticalTimeline lineColor="#d4af37">
-
         {/* GENERAL DIRECTOR */}
+        {/* CEO – Hafiz Ur Rahman */}
         <VerticalTimelineElement
-          contentStyle={{ background: '#000', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #000' }}
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          contentStyle={{ background: "#f1f1f1", color: "#000" }}
+          contentArrowStyle={{ borderRight: "7px solid  #f1f1f1" }}
+          iconStyle={{ background: "#d4af37", color: "#fff" }}
           icon={<FaUserTie />}
         >
-          <h3 className="vertical-timeline-element-title font-bold">General Director</h3>
+          <h3 className="vertical-timeline-element-title font-bold">Hafiz Ur Rahman</h3>
+          <h4 className="text-sm text-gray-600">Chief Executive Officer (CEO)</h4>
+          <ul className="mt-3 space-y-1 text-sm text-gray-800 list-disc pl-5">
+            <li>Strategic Leadership</li>
+            <li>Operational Oversight</li>
+            <li>Client Relations</li>
+          </ul>
         </VerticalTimelineElement>
 
-        {/* CEO */}
+        {/* General Manager – Irfan Ullah */}
         <VerticalTimelineElement
-          contentStyle={{ background: '#000', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #000' }}
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
+          contentStyle={{ background: "#f1f1f1", color: "#000" }}
+          contentArrowStyle={{ borderRight: "7px solid  #f1f1f1" }}
+          iconStyle={{ background: "#d4af37", color: "#fff" }}
           icon={<FaUserTie />}
         >
-          <h3 className="vertical-timeline-element-title font-bold">CEO</h3>
-        </VerticalTimelineElement>
-
-        {/* Top-Level Divisions */}
-        <VerticalTimelineElement
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
-          icon={<FaGlobe />}
-        >
-          <h3 className="text-lg font-semibold">Foreign Affairs</h3>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
-          icon={<FaProjectDiagram />}
-        >
-          <h3 className="text-lg font-semibold">Project Management</h3>
-        </VerticalTimelineElement>
-
-        {/* Administrative Affairs */}
-        <VerticalTimelineElement
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
-          icon={<FaClipboardList />}
-        >
-          <h3 className="text-lg font-semibold">Administrative Affairs</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li className="flex items-center gap-2"><FaShoppingCart /> Supplies - Purchases</li>
-            <li className="flex items-center gap-2"><FaBullhorn /> Public Relations</li>
-            <li className="flex items-center gap-2"><FaChartLine /> Marketing</li>
+          <h3 className="vertical-timeline-element-title font-bold">Irfan Ullah</h3>
+          <h4 className="text-sm text-gray-600">General Manager</h4>
+          <ul className="mt-3 space-y-1 text-sm text-gray-800 list-disc pl-5">
+            <li>Project Supervision</li>
+            <li>Department Coordination</li>
+            <li>Policy Implementation</li>
           </ul>
         </VerticalTimelineElement>
 
-        {/* Contract Management */}
+        {/* Deputy Director – Khurshed Ahmad */}
         <VerticalTimelineElement
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
-          icon={<FaFileContract />}
+          contentStyle={{ background: "#f1f1f1", color: "#000" }}
+          contentArrowStyle={{ borderRight: "7px solid  #f1f1f1" }}
+          iconStyle={{ background: "#d4af37", color: "#fff" }}
+          icon={<FaUserTie />}
         >
-          <h3 className="text-lg font-semibold">Contract Management</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li className="flex items-center gap-2"><FaLaptopCode /> Website Management</li>
-            <li className="flex items-center gap-2"><FaCogs /> Engineering and Designs</li>
+          <h3 className="vertical-timeline-element-title font-bold">Khurshed Ahmad</h3>
+          <h4 className="text-sm text-gray-600">Deputy Director</h4>
+          <ul className="mt-3 space-y-1 text-sm text-gray-800 list-disc pl-5">
+            <li>Project Monitoring</li>
+            <li>Operational Support</li>
+            <li>Team Collaboration</li>
           </ul>
         </VerticalTimelineElement>
 
-        {/* Quality and Safety */}
+        {/* Director – Rashid Ahmad */}
         <VerticalTimelineElement
-          iconStyle={{ background: '#d4af37', color: '#fff' }}
-          icon={<FaClipboardList />}
+          contentStyle={{ background: "#f1f1f1", color: "#000" }}
+          contentArrowStyle={{ borderRight: "7px solid  #f1f1f1" }}
+          iconStyle={{ background: "#d4af37", color: "#fff" }}
+          icon={<FaUserTie />}
         >
-          <h3 className="text-lg font-semibold">Quality and Safety</h3>
-          <ul className="mt-3 space-y-2 text-sm text-gray-700">
-            <li className="flex items-center gap-2"><FaTruck /> Movement Management</li>
+          <h3 className="vertical-timeline-element-title font-bold">Rashid Ahmad</h3>
+          <h4 className="text-sm text-gray-600">Director</h4>
+          <ul className="mt-3 space-y-1 text-sm text-gray-800 list-disc pl-5">
+            <li>Strategic Planning</li>
+            <li>Operations Management</li>
+            <li>Team Guidance</li>
           </ul>
         </VerticalTimelineElement>
-
       </VerticalTimeline>
     </div>
   );
