@@ -19,10 +19,10 @@ import service6 from "../assets/images/service-6.jpg";
 import carousel1 from "../assets/images/carousel-1.jpg";
 import carousel2 from "../assets/images/carousel-2.jpg";
 import { GiTrenchSpade } from "react-icons/gi";
-import hafizurrahman from "../assets/images/hafizurahman.jpg";
+// import hafizurrahman from "../assets/images/hafizurahman.jpg";
 import irfanullah from "../assets/images/irfanullah.jpg";
 import khurshid from "../assets/images/khurshid.jpg";
-import rashidahmad from "../assets/images/rashidahmad.jpg";
+// import rashidahmad from "../assets/images/rashidahmad.jpg";
 
 import { FaHome, FaHouseDamage, FaRoad, FaTools, FaBuilding, FaHardHat, FaDraftingCompass, FaFireExtinguisher } from "react-icons/fa";
 
@@ -76,7 +76,7 @@ export const teamMembers = [
     id: 1,
     name: "Hafiz Ur Rahman",
     role: "CEO & Founder",
-    image: hafizurrahman,
+    // image: hafizurrahman,
     bio: `As Chief Executive Officer of Safe Leaders Innovation Construction Company, Hafiz Ur Rahman provides visionary leadership and strategic direction, guiding the organization towards sustainable growth and industry excellence. With extensive experience in the construction sector, he is committed to delivering innovative solutions that combine quality, safety, and efficiency.
 
 His leadership philosophy focuses on building long-term client relationships, expanding the company’s capabilities, and positioning it as a market leader. Beyond overseeing operations, he actively shapes the company’s mission, values, and culture. By fostering a high-performance environment and encouraging innovation at all levels, he ensures the company remains at the forefront of industry advancements.
@@ -105,7 +105,7 @@ His expertise in operational oversight and process optimization significantly co
     id: 4,
     name: "Rashid Ahmad",
     role: "Director",
-    image: rashidahmad,
+    // image: rashidahmad,
     bio: `As Director of Safe Leaders Innovation Construction Company, Rashid Ahmad plays a central role in steering the organization’s strategic initiatives and overseeing key operational functions. With a strong background in management and a deep understanding of the construction industry, he is instrumental in driving the company’s mission to deliver projects that embody quality, safety, and innovation.
 
 He fosters a culture of accountability, collaboration, and continuous improvement across all departments. By promoting efficient workflows and supporting innovation, he enables teams to deliver exceptional results while meeting project timelines and budgets. His commitment to operational excellence and client satisfaction reinforces the company’s position as a trusted and forward-thinking industry leader.`,
