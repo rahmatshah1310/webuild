@@ -1,13 +1,4 @@
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaAngleRight,
-} from "react-icons/fa";
+import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaAngleRight } from "react-icons/fa";
 import { BsBuildings } from "react-icons/bs";
 import Button from "../ui/Button";
 
@@ -20,14 +11,14 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <a href="/" className="flex items-center mb-4">
-                 <img src="/Logo.png"  alt="Logo" className='w-15 h-15 object-cover scale-100' />
+              <img src="/Logo.png" alt="Logo" className="w-15 h-15 object-cover scale-100" />
               <h1 className="text-white font-bold uppercase flex items-center gap-2 text-xl md:text-2xl">
                 {/* <BsBuildings className="text-[#FD5D14] text-4xl" /> */}
                 Safe Leaders Innovation
               </h1>
             </a>
             <p className="mb-4 text-white/70 leading-relaxed">
-             Safe Leaders Innovation is a dynamic construction firm delivering quality through innovation, safety, and precision.
+              Safe Leaders Innovation is a dynamic construction firm delivering quality through innovation, safety, and precision.
             </p>
             <div className="space-y-2 text-white/80">
               <p className="flex items-center gap-2">
@@ -43,11 +34,7 @@ const Footer = () => {
 
             <div className="flex mt-4 gap-2">
               {[FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="bg-[#FD5D14] p-3 rounded-full hover:opacity-90 transition"
-                >
+                <a key={index} href="#" className="bg-[#FD5D14] p-3 rounded-full hover:opacity-90 transition">
                   <Icon />
                 </a>
               ))}
@@ -61,11 +48,7 @@ const Footer = () => {
               <h4 className="text-white text-lg uppercase mb-4">Quick Links</h4>
               <div className="flex flex-col gap-2 text-white/70">
                 {["Home", "About Us", "Our Services", "Meet The Team", "Contact Us"].map((item, index) => (
-                  <a
-                    href="#"
-                    key={index}
-                    className="hover:text-white flex items-center gap-2"
-                  >
+                  <a href="#" key={index} className="hover:text-white flex items-center gap-2">
                     <FaAngleRight /> {item}
                   </a>
                 ))}
@@ -76,14 +59,8 @@ const Footer = () => {
             <div className="col-span-2">
               <h4 className="text-white text-lg uppercase mb-4">Newsletter</h4>
               <form className="flex flex-col sm:flex-row gap-3 sm:gap-0">
-                <input
-                  type="email"
-                  className="flex-1 p-4 text-[#040F28] bg-white focus:outline-none"
-                  placeholder="Your Email Address"
-                />
-                <Button className="bg-[#FD5D14] text-white px-6 py-4 sm:ml-2 hover:opacity-90 transition">
-                  Sign Up
-                </Button>
+                <input type="email" className="flex-1 p-4 text-[#040F28] bg-white focus:outline-none" placeholder="Your Email Address" />
+                <Button className="bg-[#FD5D14] text-white px-6 py-4 sm:ml-2 hover:opacity-90 transition">Sign Up</Button>
               </form>
             </div>
           </div>
@@ -103,9 +80,7 @@ const Footer = () => {
           <div className="text-sm">
             <p>
               Developed by:
-              <a className="text-[#FD5D14] font-semibold"
-                target="_blank"
-                rel="noopener noreferrer" href="https://www.octetec.com">
+              <a className="text-[#FD5D14] font-semibold" target="_blank" rel="noopener noreferrer" href="https://www.octetec.com">
                 www.octetec.com
               </a>
             </p>
